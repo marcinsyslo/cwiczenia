@@ -2,15 +2,15 @@ import java.util.*;
 
 public class Main {
 
-    private static double celsiusToFahrenheit() {
+    private static void zad1() {
         Scanner in = new Scanner(System.in);
         System.out.println("Podaj wartość temperatury w stopniach Celsjusza: ");
         double celsiusDegree = in.nextFloat();
         System.out.println("Temperatura w stopniach Fahrenheita jest rowna: ");
-        return ((1.8 * celsiusDegree) + 32.0);
+        System.out.print ((1.8 * celsiusDegree) + 32.0);
     }
 
-    private static void maxAndMinValues() {
+    private static void zad2() {
         Scanner in = new Scanner(System.in);
         List<Integer> values = new ArrayList<>();
         System.out.print("Ile liczb chcesz sprawdzic? ");
@@ -27,7 +27,7 @@ public class Main {
                 + values.get(values.size()));
         }
 
-    private static void bmi(){
+    private static void zad3(){
         Scanner in = new Scanner(System.in);
         System.out.print("Podaj swoja wage w kilogramach: ");
         double weight = in.nextDouble();
@@ -43,7 +43,7 @@ public class Main {
         }
     }
 
-    private static void tax() {
+    private static void zad4() {
         Scanner in = new Scanner(System.in);
         System.out.print("Podaj dochód: ");
         double income = in.nextDouble();
@@ -57,7 +57,7 @@ public class Main {
         System.out.print("Podatek to: " + tax);
     }
 
-    private static void rata(){
+    private static void zad5(){
         Scanner in = new Scanner(System.in);
         System.out.print("Podaj wartosc towaru: ");
         double priceOfCargo = in.nextDouble();
@@ -77,11 +77,11 @@ public class Main {
             System.out.print("Rata wynosi: " + outPrice);
         } else {
             System.out.print("Ups! Złe dane. Wprowadź dane ponownie :)");
-            rata();
+            zad5();
         }
     }
 
-    private static void calculator(){
+    private static void zad6(){
         System.out.println("\n***Prosty kalkulator***\nDostępne operatory matematyczne: +,-,*,/.\n");
         System.out.println("\nWykonaj działanie. Dodaj liczbę, a następnie symbol operacji i drugę liczbę...\n\n");
         Scanner in = new Scanner(System.in);
@@ -116,11 +116,11 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        celsiusToFahrenheit();
-        maxAndMinValues();
-        bmi();
-        tax();
-        rata();
-        calculator();
+        zad1();
+        zad2();
+        zad3();
+        zad4();
+        zad5();
+        zad6();
     }
 }

@@ -1,5 +1,4 @@
 import java.util.*;
-import java.util.Scanner;
 
 public class Main {
 
@@ -108,7 +107,6 @@ public class Main {
     }
 
     private static void zad7(){
-        //zad 7
         Scanner in = new Scanner(System.in);
         System.out.print("\nWprowadź x, y, a, b");
         System.out.print("\nx: ");

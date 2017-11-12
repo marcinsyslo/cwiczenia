@@ -1,11 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### Java template
-#Iml
-*/*.iml
-#Idea files
-*/.idea/
-#Folder
-/cwiczenia/
+# Idea files
+.idea
+# Iml
+*.iml
 # Compiled class file
 *.class
 

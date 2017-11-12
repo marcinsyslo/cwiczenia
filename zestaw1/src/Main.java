@@ -7,7 +7,7 @@ public class Main {
         System.out.println("Podaj wartość temperatury w stopniach Celsjusza: ");
         double celsiusDegree = in.nextFloat();
         System.out.println("Temperatura w stopniach Fahrenheita jest rowna: ");
-        System.out.print ((1.8 * celsiusDegree) + 32.0);
+        System.out.print((1.8 * celsiusDegree) + 32.0);
     }
 
     private static void zad2() {
@@ -25,18 +25,18 @@ public class Main {
                 + values.get(0)
                 + "\nWartość najmniejsza: "
                 + values.get(values.size()));
-        }
+    }
 
-    private static void zad3(){
+    private static void zad3() {
         Scanner in = new Scanner(System.in);
         System.out.print("Podaj swoja wage w kilogramach: ");
         double weight = in.nextDouble();
         System.out.print("\nPodaj swój wzrost w metrach: ");
         double height = in.nextDouble();
-        double bmi = weight/(height*height);
-        if(bmi > 18.5 && bmi < 24.9){
+        double bmi = weight / (height * height);
+        if (bmi > 18.5 && bmi < 24.9) {
             System.out.print("\nWszystko w normie!");
-        } else if (bmi > 24.9){
+        } else if (bmi > 24.9) {
             System.out.print("\nTy grubasie");
         } else {
             System.out.print("\nNiedowaga");
@@ -52,16 +52,16 @@ public class Main {
 
     private static void logicZad4(double income) {
         double tax = 0;
-        if (income <= 85528){
+        if (income <= 85528) {
             tax = (0.18 * income) - 556.02;
         }
-        if (income > 85528){
+        if (income > 85528) {
             tax = (0.32 * (income - 85528)) + 14839.02;
         }
         System.out.print("Podatek to: " + tax);
     }
 
-    private static void zad5(){
+    private static void zad5() {
         Scanner in = new Scanner(System.in);
         System.out.print("Podaj wartosc towaru: ");
         double priceOfCargo = in.nextDouble();
@@ -72,14 +72,14 @@ public class Main {
 
     private static void logicZad5(double priceOfCargo, int amount) {
         double outPrice = 0;
-        if (priceOfCargo >= 100 && priceOfCargo <= 10000 && amount >= 6 && amount <= 48){
-            if (amount <= 12){
+        if (priceOfCargo >= 100 && priceOfCargo <= 10000 && amount >= 6 && amount <= 48) {
+            if (amount <= 12) {
                 outPrice = 0.025 * priceOfCargo;
             }
-            if (amount >= 13 && amount <= 24){
+            if (amount >= 13 && amount <= 24) {
                 outPrice = 0.05 * priceOfCargo;
             }
-            if (amount >= 25){
+            if (amount >= 25) {
                 outPrice = 0.1 * priceOfCargo;
             }
             System.out.print("Rata wynosi: " + outPrice);
@@ -89,14 +89,16 @@ public class Main {
         }
     }
 
-    private static void zad6(){
+    private static void zad6() {
         System.out.println("\n***Prosty kalkulator***\nDostępne operatory matematyczne: +,-,*,/.\n");
         System.out.println("\nWykonaj działanie. Dodaj liczbę, a następnie symbol operacji i drugę liczbę...\n\n");
         Scanner in = new Scanner(System.in);
         double value = in.nextDouble();
         String operationSymbol = in.next();
         double value2 = in.nextDouble();
-        System.out.print(calculatorOperations(operationSymbol, value, value2));
+        System.out.print(
+                calculatorOperations(operationSymbol, value, value2)
+        );
     }
 
     private static double calculatorOperations(String operationSymbol, double value, double value2) {

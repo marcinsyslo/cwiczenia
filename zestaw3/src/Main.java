@@ -128,8 +128,8 @@ public class Main {
         }
 
         int maxInDiagonal = 0;
-        for (int m = 0, n = 0; m < matrix.length; m++, n++) {
-            if (matrix[m][n] < maxInDiagonal) maxInDiagonal = matrix[m][n];
+        for (int m = 0; m < matrix.length; m++) {
+            if (matrix[m][m] < maxInDiagonal) maxInDiagonal = matrix[m][m];
         }
 
         int minInDiagonal = 0;

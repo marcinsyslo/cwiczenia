@@ -26,7 +26,6 @@ public class Main {
         if (B < A) zad2();
         else {
             int temp = A;
-
             int score = temp;
             while (A != B) {
                 score += ++A;
@@ -222,7 +221,7 @@ public class Main {
         StringBuilder priceGR = new StringBuilder();
         int i = 0;
         if (startPrice.contains(" ")) {
-            while (!(Character.toString(startPrice.charAt(i)).equals(" "))) {
+            while (!isEqualsSpace(startPrice, i)) {
                 priceZL.append(startPrice.charAt(i));
                 i++;
             }
@@ -258,6 +257,10 @@ public class Main {
         for (int m = 0; m < tempGR.length; m++){
             if (tempGR[m] != 0) System.out.print(tempGR[m] + " X " + tableGR[m] + "Gr \n");
         }
+    }
+
+    private static boolean isEqualsSpace(String startPrice, int i) {
+        return Character.toString(startPrice.charAt(i)).equals(" ");
     }
 
     public static void main(String[] args) {

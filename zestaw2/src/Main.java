@@ -6,11 +6,15 @@ public class Main {
         System.out.print("Podaj liczbę, następnie zostanie wyświetlona lista liczb nieparzystych, mniejszych od podanej liczby: ");
         Scanner in = new Scanner(System.in);
         int number = in.nextInt();
-        List<Integer> list = new ArrayList<>();
-        for (int i = 1; i <= number; i++, i++){
-            list.add(i);
+        int[] table = new int[number/2 + 1];
+        int k = 0;
+        for (int i = 1; i <= number; i = i + 2){
+            table[k] = i;
+            k++;
         }
-        System.out.print(list);
+        for (int temp : table) {
+            System.out.printf("%3s",temp);
+        }
     }
 
     private static void zad2(){

@@ -47,6 +47,10 @@ public class Main {
         Scanner in = new Scanner(System.in);
         System.out.print("Podaj dochód: ");
         double income = in.nextDouble();
+        logicZad4(income);
+    }
+
+    private static void logicZad4(double income) {
         double tax = 0;
         if (income <= 85528){
             tax = (0.18 * income) - 556.02;
@@ -63,6 +67,10 @@ public class Main {
         double priceOfCargo = in.nextDouble();
         System.out.print("Podaj ilosc rat: ");
         int amount = in.nextInt();
+        logicZad5(priceOfCargo, amount);
+    }
+
+    private static void logicZad5(double priceOfCargo, int amount) {
         double outPrice = 0;
         if (priceOfCargo >= 100 && priceOfCargo <= 10000 && amount >= 6 && amount <= 48){
             if (amount <= 12){

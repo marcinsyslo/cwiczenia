@@ -133,8 +133,8 @@ public class Main {
         }
 
         int minInDiagonal = 0;
-        for (int m = matrix.length - 1, n = 0; m >= 0; m--, n++) {
-            if (matrix[m][n] > minInDiagonal) minInDiagonal = matrix[m][n];
+        for (int m = matrix.length - 1; m >= 0; m--) {
+            if (matrix[m][m] > minInDiagonal) minInDiagonal = matrix[m][m];
         }
         System.out.print("\nMaksymalna wartość na pierwszej przekątnej: " + maxInDiagonal);
         System.out.print("\nMinimalna wartość na drugiej przekątnej: " + minInDiagonal);

@@ -69,7 +69,7 @@ class TheGameOfLife {
 
     private boolean[][] createWorld(int x, int y) {
         /*Do zadania 7*/
-        boolean[][] table = new boolean[x][y]; // +2 aby posiadać miejsce na wartości brzegowe świata.
+        boolean[][] table = new boolean[x][y];
 
         for (int i = 0; i < table.length; i++) {
             for (int j = 0; j < table.length; j++) {

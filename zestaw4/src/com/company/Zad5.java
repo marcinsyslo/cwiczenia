@@ -5,12 +5,13 @@ class Zad5 {
     static boolean isCorrect(String sequence) {
         int countL = 0;
         int countP = 0;
-        String input = sequence.replaceAll("[A-Za-z1-9*+./%\\-\\s]+", "");
 
-        for (int i = 0; i < input.length(); i++) {
-            if (Character.toString(input.charAt(i)).equals("(")) {
+        for (int i = 0; i < sequence.length(); i++) {
+            if (Character.toString(sequence.charAt(i)).equals("(")) {
                 countL++;
-            } else countP++;
+            } else if (Character.toString(sequence.charAt(i)).equals(")")) {
+                countP++;
+            }
         }
         return countL == countP;
     }
